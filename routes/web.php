@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/template', function () {
+Route::post('/template', function () {
     return view('template');
+});
+
+Route::get('/template-admin', function () {
+    return view('admin.template');
+});
+
+Route::get('/Kendaraan-Masuk', function () {
+    return view('admin.KendaraanMasuk.data');
 });
