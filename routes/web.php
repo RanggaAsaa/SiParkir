@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/template', function () {
-    return view('template');
+Route::get('/Beranda', function () {
+    return view('admin.beranda');
 });
 
 Route::get('/template-admin', function () {
@@ -27,4 +27,10 @@ Route::get('/template-admin', function () {
 
 Route::get('/Kendaraan-Masuk', function () {
     return view('admin.KendaraanMasuk.data');
+});
+Route::get('/Kendaraan-Keluar', function () {
+    return view('admin.KendaraanKeluar.data');
+});
+Route::get('/Informasi-Parkir', function () {
+    return view('admin.InformasiParkir.data');
 });

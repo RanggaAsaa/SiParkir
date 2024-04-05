@@ -1,5 +1,5 @@
 @extends('admin.template')
-@section('title', 'Kendaraan Masuk')
+@section('title', 'Beranda')
 @section('content')
 <div class="page-content"> 
     <section class="row">

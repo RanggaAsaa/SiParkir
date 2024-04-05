@@ -1,5 +1,5 @@
 @extends('admin.template')
-@section('title', 'Kendaraan Masuk')
+@section('title', 'Informasi Parkir')
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -9,14 +9,14 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Blok</th>
-                                <th>No Polisi</th>
-                                <th>Jenis Kendaraan</th>
+                                <th>Jumlah Tempat</th>
+                                <th>Tempat Terpakai</th>
+                                <th>Sisa Tempat</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                            
                         </tbody>
                     </table>
                 </div>
