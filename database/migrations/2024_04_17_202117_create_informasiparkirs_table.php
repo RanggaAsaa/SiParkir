@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('informasimasuks', function (Blueprint $table) {
+        Schema::create('informasiparkirs', function (Blueprint $table) {
             $table->id();
-            $table->string('blok',255);
-            $table->integer('jumlah_tempat',15)->default(0);
-            $table->integer('tempat_terpakai',15)->default(0);
-            $table->integer('sisa_tempat',15)->default(0);
+            $table->integer('jumlah_tempat')->default(0);
+            $table->integer('tempat_terpakai')->default(0);
+            $table->integer('sisa_tempat')->default(0);
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('informasimasuks');
+        Schema::dropIfExists('informasiparkirs');
     }
 };

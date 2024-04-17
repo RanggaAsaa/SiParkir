@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InformasiparkirController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,11 @@ Route::get('/Kendaraan-Masuk', function () {
 Route::get('/Kendaraan-Keluar', function () {
     return view('admin.KendaraanKeluar.data');
 });
-Route::get('/Informasi-Parkir', function () {
-    return view('admin.InformasiParkir.data');
+Route::controller(InformasiparkirController::class)->group(function () {
+    Route::get('/admin/InformasiParkir', 'index');
+    Route::post('/admin/InformasiParkir/form-tambah', 'create');
+    Route::post('admin/InformasiParkir/tambah', 'store');
+    Route::post('/admin/InformasiParkir/detail', 'edit');
+    Route::post('/admin/InformasiParkir/ubah/{id}', 'update');
+    Route::post('/admin/InformasiParkir/hapus', 'destroy');
 });
