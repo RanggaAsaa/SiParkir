@@ -40,3 +40,10 @@ Route::controller(InformasiparkirController::class)->group(function () {
     Route::post('/admin/InformasiParkir/ubah/{id}', 'update');
     Route::post('/admin/InformasiParkir/hapus', 'destroy');
 });
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
