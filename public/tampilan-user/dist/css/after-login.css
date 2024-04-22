@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav.sticky{
+        background-color: #fff;
+        box-shadow: #29292949 0px 1px 10px;
+        transition: 0.5s ease;
+    }
+
+    .navbar{
+        background-color: trasparent;
+        font-family: DM Sans, sans-serif;
+        padding-top:5px !important;
+    }
+
+    .logo{
+        font-family: jost, sans-serif;
+        color: #292929;
+        margin-left: -150px !important;
+        padding-left: 150px !important;
+        font-weight: 600;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    /*end navbar*/
+
+    /*pengenalan*/
+
+    .pengenalan{
+        margin-top: 50px;
+        font-family: poppins, sans-serif;
+    }
+
+    .header-text-aplikasi{
+        font-size: 30px;
+        font-weight: 600;
+        color: rgba(45, 124, 197, 0.856);
+    }
+
+    .paragraph-text-aplikasi{
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .btn-header{
+        background-color: rgba(45, 124, 197, 0.856);
+        color: #fff;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 7px;
+        border: none;
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+
+    .btn-header a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header-text-cek-tempat-parkir{
+        font-size: 30px;
+        font-weight: 600;
+        color: rgba(45, 124, 197, 0.856);
+        margin-top: 90px;
+    }
+    /*end pengenalan*/
+
+
+     /*footer*/
+     footer{
+        background-color: #f2f2f2;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    
+    .header-text-footer{
+        font-family: DM Sans, sans-serif;
+        margin-top: 15px;
+        font-size: 24px;
+        font-weight: 700;
+        color: rgba(45, 124, 197, 0.856);
+    }
+    
+    .list-unstyled a{
+        font-family: DM Sans, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #292929;
+    }
+
+    .list-unstyled a:hover{
+        color: rgba(45, 124, 197, 0.856); 
+    }
+
+    
+    .social-media i{
+        font-size: 25px;
+        margin-right: 15px;
+        color: rgba(59, 61, 63, 0.856);
+    }
+    
+    .bi-instagram:hover{
+        color: #E1306C;
+        transition: 0.5s ease;
+    }
+    
+    .bi-facebook:hover{
+        color: #4267B2;
+        transition: 0.5s ease;
+    }
+    
+    .bi-github:hover{
+        color: #7910cf;
+        transition: 0.5s ease;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar{
+        background-color: #ffff;
+        font-family: DM Sans, sans-serif;
+        padding-top:5px !important;
+    }
+
+    .logo{
+        font-family: jost, sans-serif;
+        color: #292929;
+        margin-left: -100px !important;
+        padding-left: 150px !important;
+        font-weight: 600;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+    nav.sticky{
+        background-color: #fff;
+        box-shadow: #29292949 0px 1px 10px;
+        transition: 0.5s ease;
+    }
+
+    /*end navbar*/
+
+    /*pengenalan*/
+
+    .pengenalan{
+        margin-top: 90px;
+        font-family: poppins, sans-serif;
+    }
+
+    .header-text-aplikasi{
+        font-size: 35px;
+        font-weight: 600;
+        color: rgba(45, 124, 197, 0.856);
+        margin-top: 60px;
+    }
+
+    .paragraph-text-aplikasi{
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .btn-header{
+        background-color: rgba(45, 124, 197, 0.856);
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 7px;
+        border: none;
+        margin-top: 20px;
+    }
+
+    .btn-header a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header-text-cek-tempat-parkir{
+        font-size: 30px;
+        font-weight: 600;
+        color: rgba(45, 124, 197, 0.856);
+        margin-top: 90px;
+    }
+    /*end pengenalan*/ 
+
+
+     /*footer*/
+     footer{
+        background-color: #f2f2f2;
+        padding-top: 50px;
+        padding-bottom:200px;
+    }
+    
+    .header-text-footer{
+        font-family: DM Sans, sans-serif;
+        margin-top: 15px;
+        font-size: 24px;
+        font-weight: 700;
+        color: rgba(45, 124, 197, 0.856);
+    }
+    
+    .list-unstyled a{
+        font-family: DM Sans, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #292929;
+    }
+
+    .list-unstyled a:hover{
+        color: rgba(45, 124, 197, 0.856); 
+    }
+
+    
+    .social-media i{
+        font-size: 25px;
+        margin-right: 15px;
+        color: rgba(59, 61, 63, 0.856);
+    }
+    
+    .bi-instagram:hover{
+        color: #E1306C;
+        transition: 0.5s ease;
+    }
+    
+    .bi-facebook:hover{
+        color: #4267B2;
+        transition: 0.5s ease;
+    }
+    
+    .bi-github:hover{
+        color: #7910cf;
+        transition: 0.5s ease;
+    }
+        
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar{
+    background-color: transparent;
+    font-family: DM Sans, sans-serif;
+    padding-top:5px !important;
+}
+
+nav.sticky{
+    background-color: #fff;
+    box-shadow: #29292949 0px 1px 10px;
+    transition: 0.5s ease;
+}
+
+.logo{
+    font-family: jost, sans-serif;
+    color: #292929;
+    margin-left: -100px !important;
+    padding-left: 150px !important;
+    font-weight: 600;
+    font-size: 30px;
+    text-decoration: none;
+
+}
+
+.navbar .nav-item a{
+    color: #292929;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.nav-item{
+    margin-right: 15px;
+}
+
+.nav-item a:hover{
+    text-shadow: #fff 0px 0px 5px;
+}
+
+.nav-item a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    margin: auto;
+    background-color: rgba(124, 186, 245, 0.671);
+    display: block;
+}
+
+.nav-item a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+
+/* End Navbar */
+
+/*halaman utama*/
+.pengenalan{
+    font-family: poppins, sans-serif;
+    margin-top:150px !important;
+}
+
+.pengenalan .header-text-aplikasi{
+    margin-top:40px;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(45, 124, 197, 0.856);
+}
+
+.image-header{
+    margin-top: -90px !important;
+}
+
+.btn-header{
+    background-color: rgba(45, 124, 197, 0.856);
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 20px;
+}
+
+.btn-header a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+.btn-header:hover{
+    background-color: skyblue;
+    color: #292929;
+    box-shadow: rgba(45, 124, 197, 0.856) 0px 5px 10px;
+    transition: 0.5s ease;
+}
+/*end halaman utama*/
+
+/*tentang*/
+.tentang{
+    font-family: poppins, sans-serif;
+}
+
+.header-text-tentang{
+    margin-top: 15px;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(45, 124, 197, 0.856);
+}
+
+.paragraph-tentang{
+    font-size: 15px;
+    font-weight: 400;
+    color: #292929;
+    margin-top: 120px;
+    text-align: justify;
+}
+
+.btn-header-tentang{
+    background-color: rgba(45, 124, 197, 0.856);
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 10px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 300px;
+}
+
+.btn-header-tentang:hover{
+    background-color: skyblue;
+    color: #292929;
+    box-shadow: rgba(45, 124, 197, 0.856) 0px 5px 10px;
+    transition: 0.5s ease;
+}
+/*end tentang*/
+
+/*cek tempat parkir*/
+.cek-tempat-parkir{
+    font-family: poppins, sans-serif;
+}
+
+.header-text-cek-tempat-parkir{
+    margin-top: 15px;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(45, 124, 197, 0.856);
+}
+
+/*end cek tempat parkir*/
+
+/*footer*/
+
+footer{
+    background-color: #f2f2f2;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.header-text-footer{
+    font-family: DM Sans, sans-serif;
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(45, 124, 197, 0.856);
+}
+
+.list-unstyled a{
+    font-family: DM Sans, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #292929;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.social-media i{
+    font-size: 25px;
+    margin-right: 15px;
+    color: rgba(59, 61, 63, 0.856);
+}
+
+.bi-instagram:hover{
+    color: #E1306C;
+    transition: 0.5s ease;
+}
+
+.bi-facebook:hover{
+    color: #4267B2;
+    transition: 0.5s ease;
+}
+
+.bi-github:hover{
+    color: #7910cf;
+    transition: 0.5s ease;
+} 
+
+/*end footer*/
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

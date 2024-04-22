@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/BerandanyaUser', function () {
+    return view('user.halamanawal');
+});
+
+Route::get('/Beranda-user', function () {
+    return view('user.after-login');
+});
+
 Route::get('/Beranda', function () {
     return view('admin.beranda');
 });
