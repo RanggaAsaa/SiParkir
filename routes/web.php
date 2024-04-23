@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InformasiparkirController;
+use App\Http\Controllers\BerandauserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +21,6 @@ Route::get('/', function () {
 
 Route::get('/BerandanyaUser', function () {
     return view('user.halamanawal');
-});
-
-Route::get('/Beranda-user', function () {
-    return view('user.after-login');
 });
 
 Route::get('/Beranda', function () {
@@ -48,6 +45,12 @@ Route::controller(InformasiparkirController::class)->group(function () {
     Route::post('/admin/InformasiParkir/ubah/{id}', 'update');
     Route::post('/admin/InformasiParkir/hapus', 'destroy');
 });
+
+
+Route::controller(BerandauserController::class)->group(function () {
+    Route::get('/Beranda-user', 'index'); 
+});
+
 
 
 

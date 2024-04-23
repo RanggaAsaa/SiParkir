@@ -62,33 +62,6 @@
       </div>
     </div>
     </section>
-
-    <section class="cek-tempat-parkir" id="cektempatparkir">
-      <div class="container text-center">
-        <h2 class="header-text-cek-tempat-parkir">Cek Tempat Parkir</h2>
-        <div class="card mt-4">
-          <div class="card-header">
-            Tempat Parkir
-          </div>
-          <div class="card-body">
-            <table class="table table-responsive">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Blok</th>
-                  <th>Jumlah Tempat</th>
-                  <th>Tempat Terpakai</th>
-                  <th>Sisa Tempat</th>
-                </tr>
-              </thead>
-              <tbody>
-               
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
     
     <section class="footer" id="footer">
       <footer class="footer mt-5">
