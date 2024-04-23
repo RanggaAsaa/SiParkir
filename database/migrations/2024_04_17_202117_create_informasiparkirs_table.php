@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('informasiparkirs', function (Blueprint $table) {
             $table->id();
+            $table->string('blok')->default(0);
             $table->integer('jumlah_tempat')->default(0);
             $table->integer('tempat_terpakai')->default(0);
             $table->integer('sisa_tempat')->default(0);

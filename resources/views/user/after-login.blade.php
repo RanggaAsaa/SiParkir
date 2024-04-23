@@ -71,13 +71,15 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($data as $isi)
                 <tr>
-                  <td>1</td>
-                  <td>Blok A</td>
-                  <td>5</td>
-                  <td>3</td>
-                  <td>2</td>
+                    <td>{{$loop->iteration }}</td>
+                    <td>{{$isi->blok}}</td>
+                    <td>{{$isi->jumlah_tempat}}</td>
+                    <td>{{$isi->tempat_terpakai }}</td>
+                    <td>{{$isi->sisa_tempat }}</td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
             <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
