@@ -76,8 +76,8 @@
                     <td>{{$loop->iteration }}</td>
                     <td>{{$isi->blok}}</td>
                     <td>{{$isi->jumlah_tempat}}</td>
-                    <td>{{$isi->tempat_terpakai }}</td>
-                    <td>{{$isi->sisa_tempat }}</td>
+                    <td>{{$isi->tempat_terpakai = $isi->jumlah_tempat-$isi->sisa_tempat}}</td>
+                    <td>{{$isi->sisa_tempat = $isi->jumlah_tempat-$isi->tempat_terpakai}}</td>
                 </tr>
                 @endforeach
               </tbody>
@@ -131,9 +131,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="/admin/Kendaraan-Masuk/tambah" method="POST">
+          @csrf
           <label for="blok" class="form-label">Pilih Blok</label>
-          <select class="form-select mb-3" aria-label="Default select example">
+          <select class="form-select mb-3" aria-label="Default select example" name="blok">
             <option>Pilih Blok</option>
             <option value="blok-a">Blok-A</option>
             <option value="blok-b">Blok-B</option>
@@ -141,24 +142,24 @@
           </select>
           <div class="mb-2">
             <label for="no_polisi" class="form-label">No Polisi</label>
-            <input type="text" class="form-control" id="no_polisi" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="no_polisi" aria-describedby="emailHelp" name="nopol">
           </div>
           <label for="jenis_kendaraan" class="form-label">Jenis Kendaraan</label>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" name="jenis_kendaraan">
             <option>Pilih Jenis Kendaraan</option>
             <option value="mobil">Mobil</option>
-            <option value="montor">Montor</option>
-            <option value="sepeda">Sepeda</option>
+            <option value="motor">Montor</option>
           </select>
-        </form> 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Booking</button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" onclick="confirmBooking()">Booking</button>
+          </form> 
       </div>
     </div>
   </div>
 </div>
     <script src="{{ url('tampilan-user/dist/js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
   </body>

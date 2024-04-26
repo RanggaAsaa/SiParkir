@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\informasiparkir;
+use App\Models\Informasiparkir;
+use App\Models\Kendaraanmasuk;
 use Illuminate\Http\Request;
 
 class BerandauserController extends Controller
@@ -14,7 +15,10 @@ class BerandauserController extends Controller
     {
         $data = Informasiparkir::all();
         return view('user.after-login', [
-            'data' => $data
+            'data' => $data,
+            'jumlahkendaraanmasuk' => kendaraanmasuk::all()->count(),
+            'jumlahtersisa' => informasiparkir::all()->sum('jumlah_tempat_parkir') - kendaraanmasuk::all()->count(),
+
         ]);
     }
 
@@ -24,6 +28,7 @@ class BerandauserController extends Controller
     public function create()
     {
         //
+     
     }
 
     /**
@@ -32,6 +37,17 @@ class BerandauserController extends Controller
     public function store(Request $request)
     {
         //
+        $tambah = Kendaraanmasuk::create([
+            'blok' => $request->blok,
+            'nopol' => $request->nopol,
+            'jenis_kendaraan' => $request->jenis_kendaraan
+        ]);
+
+        if ($tambah) {
+            return back()->with('alert', 'Data Berhasil Ditambahkan !');
+        } else {
+            return back()->with('alert-warning', 'Data Gagal Ditambahkan !, segera hubungi petugas developer !');
+        }
     }
 
     /**

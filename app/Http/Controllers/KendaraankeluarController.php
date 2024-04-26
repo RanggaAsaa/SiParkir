@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Kendaraankeluar;
 use Illuminate\Http\Request;
 
 class KendaraankeluarController extends Controller
@@ -11,7 +11,13 @@ class KendaraankeluarController extends Controller
      */
     public function index()
     {
-        //
+        $data=Kendaraankeluar::all();
+        return view('admin.Kendaraankeluar.data',[
+            'data' => $data,
+            'route' => 'Kendaraan-Keluar', //menyesuaikan route halaman
+            'judul' => 'Kendaraan Keluar', //judul menu utama
+            'menu' => 'Kendaraan Keluar', //judul halaman
+        ]);
     }
 
     /**
@@ -19,7 +25,8 @@ class KendaraankeluarController extends Controller
      */
     public function create()
     {
-        //
+       $data = view ('admin.KendaraanKeluar.tambah')->render();
+       return $data;
     }
 
     /**
@@ -27,7 +34,18 @@ class KendaraankeluarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tambah = Kendaraankeluar::create([
+            'blok' => $request->blok,
+            'no_pol' => $request->no_pol,
+            'jenis_kendaraan' => $request->jenis_kendaraan,
+            'jenis_kendaraan' => $request->jenis_kendaraan,
+        ]);
+
+        if ($tambah) {
+            return back()->with('alert', 'Data Berhasil Ditambahkan !');
+        } else {
+            return back()->with('alert-warning', 'Data Gagal Ditambahkan !, segera hubungi petugas developer !');
+        }
     }
 
     /**

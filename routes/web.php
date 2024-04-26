@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\InformasiparkirController;
+use App\Http\Controllers\KendaraanmasukController;
+use App\Http\Controllers\KendaraankeluarController;
 use App\Http\Controllers\BerandauserController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,22 +33,38 @@ Route::get('/template-admin', function () {
     return view('admin.template');
 });
 
-Route::get('/Kendaraan-Masuk', function () {
-    return view('admin.KendaraanMasuk.data');
-});
-Route::get('/Kendaraan-Keluar', function () {
-    return view('admin.KendaraanKeluar.data');
-});
+
+
+//Route Informasi Parkir//
 Route::controller(InformasiparkirController::class)->group(function () {
     Route::get('/admin/InformasiParkir', 'index');
-    Route::post('/admin/InformasiParkir/form-tambah', 'create');
     Route::post('admin/InformasiParkir/tambah', 'store');
     Route::post('/admin/InformasiParkir/detail', 'edit');
     Route::post('/admin/InformasiParkir/ubah/{id}', 'update');
-    Route::post('/admin/InformasiParkir/hapus', 'destroy');
+    Route::get('/admin/InformasiParkir/hapus{id}', 'destroy');
 });
 
 
+//Route Kendaraan Masuk//
+Route::controller(KendaraanmasukController::class)->group(function () {
+    Route::get('/admin/Kendaraan-Masuk', 'index');
+    Route::post('admin/Kendaraan-Masuk/tambah', 'store');   
+    Route::post('/admin/Kendaraan-Masuk/detail', 'edit');
+    Route::post('/admin/Kendaraan-Masuk/ubah/{id}', 'update');
+    Route::get('/admin/Kendaraan-Masuk/hapus/{id}', 'destroy');
+});
+
+//Route Kendaraan Keluar//
+Route::controller(KendaraankeluarController::class)->group(function () {
+    Route::get('/admin/Kendaraan-Keluar', 'index');
+    Route::post('admin/Kendaraan-Keluar/tambah', 'store');
+    Route::post('/admin/Kendaraan-Keluar/detail', 'edit');
+    Route::post('/admin/Kendaraan-Keluar/ubah/{id}', 'update');
+    Route::post('/admin/Kendaraan-Keluar/hapus', 'destroy');
+});
+
+
+//Route User//
 Route::controller(BerandauserController::class)->group(function () {
     Route::get('/Beranda-user', 'index'); 
 });

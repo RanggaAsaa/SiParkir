@@ -73,10 +73,10 @@
                             <ul class="submenu ">
 
                                 <li class="submenu-item  ">
-                                    <a href="/Kendaraan-Masuk" class="submenu-link">Kendaraan Masuk</a>
+                                    <a href="/admin/Kendaraan-Masuk" class="submenu-link">Kendaraan Masuk</a>
                                 </li>
                                 <li class="submenu-item  ">
-                                    <a href="Kendaraan-Keluar" class="submenu-link">Kendaraan Keluar</a>
+                                    <a href="/admin/Kendaraan-Keluar" class="submenu-link">Kendaraan Keluar</a>
                                 </li>
                                 <li class="submenu-item  ">
                                     <a href="/admin/InformasiParkir" class="submenu-link">Informasi Parkir</a>
@@ -133,6 +133,8 @@
             </footer>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ url('tampilan-user/dist/js/script.js') }}"></script>
     <script src="{{ url('template/dist/assets/static/js/components/dark.js') }}"></script>
     <script src="{{ url('template/dist/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ url('template/dist/assets/compiled/js/app.js') }}"></script>

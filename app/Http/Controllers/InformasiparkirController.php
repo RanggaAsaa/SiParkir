@@ -39,6 +39,7 @@ class InformasiparkirController extends Controller
     {
         //
         $tambah = informasiparkir::create([
+            'blok' => $request->blok,
             'jumlah_tempat' => $request->jumlah_tempat,
             'tempat_terpakai' => $request->tempat_terpakai,
             'sisa_tempat' => $request->sisa_tempat,
@@ -81,6 +82,7 @@ class InformasiparkirController extends Controller
         //
         $ubah = informasiparkir::where('id', $id)
             ->update([
+                'blok' => $request->blok,
             'jumlah_tempat' => $request->jumlah_tempat,
             'tempat_terpakai' => $request->tempat_terpakai,
             'sisa_tempat' => $request->sisa_tempat,
@@ -100,6 +102,10 @@ class InformasiparkirController extends Controller
     {
         //
         $hapus = informasiparkir::where('id', $request->id)->delete();
-        return $hapus;
+        if ($hapus) {
+            return back()->with('alert', 'Data Berhasil Dihapus !');
+        } else {
+            return back()->with('alert-warning', 'Data Gagal Dihapus !, segera hubungi petugas developer !');
+        }
     }
 }
